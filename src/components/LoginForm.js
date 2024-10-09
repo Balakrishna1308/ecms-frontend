@@ -1,12 +1,11 @@
 // import React, { useState } from 'react';
 // import axios from 'axios';
 
-// const SignUpForm = () => {
+// const LoginForm = () => {
 //     // State for user input
-//     const [user, setUser] = useState({
+//     const [loginData, setLoginData] = useState({
 //         username: '',
-//         password: '',
-//         role: 'USER' // Default role
+//         password: ''
 //     });
 
 //     // State for success or error message
@@ -14,8 +13,8 @@
 
 //     const handleChange = (e) => {
 //         const { name, value } = e.target;
-//         setUser({
-//             ...user,
+//         setLoginData({
+//             ...loginData,
 //             [name]: value
 //         });
 //     };
@@ -25,30 +24,30 @@
 //         // Reset message state
 //         setMessage('');
 
-//         // Make a POST request to register the user
-//         axios.post('http://localhost:8080/api/users/register', user)
+//         // Make a POST request to login the user
+//         axios.post('http://localhost:8080/api/users/login', loginData)
 //             .then(response => {
 //                 console.log(response.data);
 //                 // Display success message
-//                 setMessage('User registered successfully!');
+//                 setMessage('Login successful!');
 //             })
 //             .catch(error => {
 //                 console.error(error);
 //                 // Display error message
-//                 setMessage('Error registering user. Please try again.');
+//                 setMessage(error.response.data || 'Error logging in. Please try again.');
 //             });
 //     };
 
 //     return (
-//         <div className="signup-form">
-//             <h2>Register</h2>
+//         <div className="login-form">
+//             <h2>Login</h2>
 //             <form onSubmit={handleSubmit}>
 //                 <div>
 //                     <label>Username:</label>
 //                     <input
 //                         type="text"
 //                         name="username"
-//                         value={user.username}
+//                         value={loginData.username}
 //                         onChange={handleChange}
 //                         required
 //                     />
@@ -58,12 +57,12 @@
 //                     <input
 //                         type="password"
 //                         name="password"
-//                         value={user.password}
+//                         value={loginData.password}
 //                         onChange={handleChange}
 //                         required
 //                     />
 //                 </div>
-//                 <button type="submit">Register</button>
+//                 <button type="submit">Login</button>
 //             </form>
 
 //             {/* Display the success or error message */}
@@ -72,7 +71,7 @@
 //     );
 // };
 
-// export default SignUpForm;
+// export default LoginForm;
 
 
 
@@ -81,12 +80,11 @@
 // import React, { useState } from 'react';
 // import axios from 'axios';
 
-// const SignUpForm = () => {
+// const LoginForm = () => {
 //     // State for user input
-//     const [user, setUser] = useState({
+//     const [loginData, setLoginData] = useState({
 //         username: '',
-//         password: '',
-//         role: 'USER' // Default role
+//         password: ''
 //     });
 
 //     // State for success or error message
@@ -94,8 +92,8 @@
 
 //     const handleChange = (e) => {
 //         const { name, value } = e.target;
-//         setUser({
-//             ...user,
+//         setLoginData({
+//             ...loginData,
 //             [name]: value
 //         });
 //     };
@@ -105,30 +103,30 @@
 //         // Reset message state
 //         setMessage('');
 
-//         // Make a POST request to register the user
-//         axios.post('http://localhost:8080/api/users/register', user)
+//         // Make a POST request to login the user
+//         axios.post('http://localhost:8080/api/users/login', loginData)
 //             .then(response => {
 //                 console.log(response.data);
 //                 // Display success message
-//                 setMessage('User registered successfully!');
+//                 setMessage('Login successful!');
 //             })
 //             .catch(error => {
 //                 console.error(error);
 //                 // Display error message
-//                 setMessage('Error registering user. Please try again.');
+//                 setMessage(error.response.data || 'Error logging in. Please try again.');
 //             });
 //     };
 
 //     return (
-//         <div className="signup-form">
-//             <h2>Register</h2>
+//         <div className="login-form">
+//             <h2>Login</h2>
 //             <form onSubmit={handleSubmit}>
 //                 <div>
 //                     <label>Username:</label>
 //                     <input
 //                         type="text"
 //                         name="username"
-//                         value={user.username}
+//                         value={loginData.username}
 //                         onChange={handleChange}
 //                         required
 //                     />
@@ -138,12 +136,12 @@
 //                     <input
 //                         type="password"
 //                         name="password"
-//                         value={user.password}
+//                         value={loginData.password}
 //                         onChange={handleChange}
 //                         required
 //                     />
 //                 </div>
-//                 <button type="submit">Register</button>
+//                 <button type="submit">Login</button>
 //             </form>
 
 //             {/* Display the success or error message */}
@@ -152,7 +150,8 @@
 //     );
 // };
 
-// export default SignUpForm;
+// export default LoginForm;
+
 
 
 
@@ -161,12 +160,11 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
-const SignUpForm = () => {
+const LoginForm = () => {
     // State for user input
-    const [user, setUser] = useState({
+    const [loginData, setLoginData] = useState({
         username: '',
-        password: '',
-        role: 'USER' // Default role
+        password: ''
     });
 
     // State for success or error message
@@ -174,8 +172,8 @@ const SignUpForm = () => {
 
     const handleChange = (e) => {
         const { name, value } = e.target;
-        setUser({
-            ...user,
+        setLoginData({
+            ...loginData,
             [name]: value
         });
     };
@@ -185,30 +183,30 @@ const SignUpForm = () => {
         // Reset message state
         setMessage('');
 
-        // Make a POST request to register the user
-        axios.post('http://localhost:8080/api/users/register', user)
+        // Make a POST request to login the user
+        axios.post('http://localhost:8080/api/users/login', loginData)
             .then(response => {
                 console.log(response.data);
                 // Display success message
-                setMessage('User registered successfully!');
+                setMessage('Login successful!');
             })
             .catch(error => {
                 console.error(error);
                 // Display error message
-                setMessage('Error registering user. Please try again.');
+                setMessage(error.response.data || 'Error logging in. Please try again.');
             });
     };
 
     return (
-        <div className="signup-form">
-            <h2>Register</h2>
+        <div className="login-form">
+            <h2>Login</h2>
             <form onSubmit={handleSubmit}>
                 <div>
                     <label>Username:</label>
                     <input
                         type="text"
                         name="username"
-                        value={user.username}
+                        value={loginData.username}
                         onChange={handleChange}
                         required
                     />
@@ -218,12 +216,12 @@ const SignUpForm = () => {
                     <input
                         type="password"
                         name="password"
-                        value={user.password}
+                        value={loginData.password}
                         onChange={handleChange}
                         required
                     />
                 </div>
-                <button type="submit">Register</button>
+                <button type="submit">Login</button>
             </form>
 
             {/* Display the success or error message */}
@@ -232,4 +230,4 @@ const SignUpForm = () => {
     );
 };
 
-export default SignUpForm;
+export default LoginForm;
